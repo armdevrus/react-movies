@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.brand-logo{
+  margin-left: 1.5rem;
+}
+.container_main {
+ min-height: calc(100vh - 64px - 70px); 
+ padding: 1.5rem;
+}
+/* 
+.col {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.card{
+  margin: 0.5rem 0.5rem;
+  min-height: 55vh;
+}
+.card-image{
+  height: 100%;
+}
+.card-image > img {
+  height: 85%;
+  width: auto;
+  object-fit: cover;
+}
+.title-container{
+  position: relative;
+}
+.title-name{
+  max-width: 80%;
+  position: absolute;
+  padding: 10px 2rem ;
+  font-size: large;
+}
+.title-type{
+  position: absolute;
+  top: 12px;
+  right: 2rem;
+  font-size: 15px;
+  color: brown;
+}
+.title-year{
+  position: absolute;
+  top: 3rem;
+  right: 2rem;
+  font-size: 14px;
+  color: black;
+} */
+
+.movies{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.card{
+  margin: 1vmin
+}
+.search-btn{
+  position:absolute;
+  top:0;
+  right: 10px;
+}
+.container-radio{
+  display: flex;
+  justify-content: space-around;
+}

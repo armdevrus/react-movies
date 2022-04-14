@@ -12,15 +12,21 @@ class Main extends React.Component {
     };
 
     componentDidMount() {
-        fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&s=avengers`)
+        fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=avengers`)
             .then((response) => response.json())
             .then((data) =>
                 this.setState({ movies: data.Search, loading: false })
-            );
+            )
+            .catch((error) => {
+                console.error(error);
+                this.setState({loading: false})
+            })
     }
 
     handleUpdateMovies = (name, type = "all") => {
         this.setState({ loading: true });
+
+        // Альтернативное решение проблемы: name = undefined 
         // fetch(
         //     `http://www.omdbapi.com/?apikey=c4047b88&s=${name}${
         //         type != "all" ? `&type=${type}` : ""
@@ -32,8 +38,9 @@ class Main extends React.Component {
         //             ? this.setState({ movies: data.Search, loading: false })
         //             : alert(data.Error)
         //     );
+
         fetch(
-            `http://www.omdbapi.com/?apikey=${API_KEY}&s=${name}${
+            `https://www.omdbapi.com/?apikey=${API_KEY}&s=${name}${
                 type != "all" ? `&type=${type}` : ""
             }`
         )
